@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HashCalculator</string>
+    <string name="enter_text">enter text</string>
+    <string name="show_calculated_hash">Show Calculated Hash</string>
+    <string name="calculate_hash">Calculate Hash</string>
+
+</resources>

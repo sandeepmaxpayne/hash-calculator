@@ -4,7 +4,15 @@
     <string name="show_calculated_hash">Show Calculated Hash</string>
     <string name="calculate_hash">Calculate Hash</string>
     <string name="enter_text_for_ecdsa">Enter text for ECDSA</string>
-    <string name="show_ecdsa_key_pair">Show ECDSA Key Pair</string>
-    <string name="generate_ecdsa_key_pair">Generate ECDSa Key Pair</string>
+    <string name="show_ecdsa_key_pair">Public Key Generated</string>
+    <string name="generate_ecdsa_key_pair">Verify Signature</string>
+    <string name="your_private_key">Your Private Key</string>
+    <string name="generate_private_key">Generate Private Key</string>
+    <string name="generate_public_key">Generate Public Key</string>
+    <string name="enter_your_private_key_to_generate_signature">Enter Your Private Key to generate Signature</string>
+    <string name="generate_signaure">Generate Signaure</string>
+    <string name="signature">Signature:</string>
+    <string name="enter_public_key_to_verify_signature">enter Public Key to Verify Signature</string>
+    <string name="calculate_signature">calculate Signature</string>
 
 </resources>

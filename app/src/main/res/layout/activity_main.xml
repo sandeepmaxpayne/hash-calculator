@@ -47,53 +47,25 @@
                     android:layout_height="wrap_content">
 
                 <Button android:layout_width="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/nextSig"
+                        android:text="@string/calculate_signature"
+                        android:layout_height="wrap_content"/>
+
+
+                <Button android:layout_width="wrap_content"
                         android:id="@+id/calcHash"
                         android:text="@string/calculate_hash"
                         android:gravity="center_horizontal"
                         android:layout_height="wrap_content"/>
             </LinearLayout>
 
-            <EditText android:layout_width="match_parent"
-                      android:id="@+id/enterDataEC"
-                      android:layout_marginTop="20dp"
-                      android:hint="@string/enter_text_for_ecdsa"
-                      android:gravity="center_horizontal"
-                      android:layout_height="wrap_content"/>
-
-            <TextView android:layout_width="match_parent"
-                      android:id="@+id/dispECD"
-                      android:textSize="18sp"
-                      android:hint="@string/show_ecdsa_key_pair"
-                      android:layout_marginTop="15dp"
-                      android:layout_marginLeft="15dp"
-                      android:layout_marginRight="15dp"
-                      android:gravity="center_horizontal"
-                      android:layout_height="wrap_content"/>
-
-            <TextView android:layout_width="match_parent"
-                      android:id="@+id/disSig"
-                      android:textSize="18sp"
-                      android:layout_marginTop="15dp"
-                      android:layout_marginLeft="15dp"
-                      android:text="Signature"
-                      android:layout_marginRight="15dp"
-                      android:gravity="center_horizontal"
-                      android:layout_height="wrap_content"/>
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_marginTop="15dp"
-                          android:layout_gravity="center_horizontal"
-                          android:layout_height="wrap_content">
-
-                <Button android:layout_width="wrap_content"
-                        android:id="@+id/calcEC"
-                        android:text="@string/generate_ecdsa_key_pair"
-                        android:gravity="center_horizontal"
-                        android:layout_height="wrap_content"/>
-
-            </LinearLayout>
 
 
         </LinearLayout>
+
 
 
     </ScrollView>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background"
+        tools:context=".EcKeyGen">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/enterDataEC"
+              android:layout_marginTop="20dp"
+              android:hint="@string/enter_text_for_ecdsa"
+              android:gravity="center_horizontal"
+              android:layout_height="wrap_content"/>
+
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="15dp"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="wrap_content">
+
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/genPrivateKey"
+                        android:text="@string/generate_private_key"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/show_Private_key"
+                      android:layout_marginTop="15dp"
+                      android:layout_marginLeft="15dp"
+                      android:layout_marginRight="15dp"
+                      android:gravity="center_horizontal"
+                      android:textSize="20sp"
+                      android:hint="@string/your_private_key"
+                      android:layout_height="wrap_content"/>
+
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_marginTop="15dp"
+                          android:layout_gravity="center_horizontal"
+                          android:layout_height="wrap_content">
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/gen_public_key"
+                        android:text="@string/generate_public_key"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <EditText android:layout_width="match_parent"
+              android:id="@+id/dis_public_key"
+              android:textSize="18sp"
+              android:hint="@string/show_ecdsa_key_pair"
+              android:layout_marginTop="15dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:gravity="center_horizontal"
+              android:layout_height="wrap_content"/>
+            <EditText android:layout_width="match_parent"
+                      android:id="@+id/enter_private_key"
+                      android:gravity="center_horizontal"
+                      android:layout_marginTop="15dp"
+                      android:hint="@string/enter_your_private_key_to_generate_signature"
+                      android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="15dp"
+                          android:layout_gravity="center_vertical"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:textSize="20sp"
+                          android:textStyle="bold"
+                          android:layout_gravity="center_vertical"
+                          android:text="@string/signature"
+                          android:layout_height="wrap_content"/>
+                <TextView android:layout_width="match_parent"
+                          android:layout_gravity="center_vertical"
+                          android:layout_marginStart="12dp"
+                          android:textSize="20dp"
+                          android:layout_marginEnd="18dp"
+                          android:id="@+id/show_signature"
+                          android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:gravity="center_horizontal"
+                          android:orientation="vertical"
+                          android:layout_marginTop="15dp"
+                          android:layout_height="wrap_content">
+                <Button android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/gen_sign"
+                        android:text="@string/generate_signaure"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/enterPubKey"
+              android:textSize="18sp"
+              android:layout_marginTop="15dp"
+              android:hint="@string/enter_public_key_to_verify_signature"
+              android:gravity="center_horizontal"
+              android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:id="@+id/showVerify"
+                      android:textSize="18sp"
+                      android:layout_marginTop="10dp"
+                      android:textStyle="bold"
+                      android:gravity="center_horizontal"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent"
+                      android:textSize="18dp"
+                      android:id="@+id/dispmsg"
+                      android:gravity="start"
+                      android:textStyle="italic"
+                      android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_marginTop="15dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_height="wrap_content">
+
+        <Button android:layout_width="wrap_content"
+                android:id="@+id/verifySig"
+                android:text="@string/generate_ecdsa_key_pair"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

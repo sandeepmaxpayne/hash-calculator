@@ -6,4 +6,11 @@
 
     <color name="background">#EAB3F0</color>
     <color name="dark">#E72B6A</color>
+
+    <color name="purple">#505BA0</color>
+    <color name="yellow">#D7E924</color>
+    <color name="green">#7BB83A</color>
+
+    <color name="red">#A80FC2</color>
+    <color name="reddish">#D0D80C0C</color>
 </resources>

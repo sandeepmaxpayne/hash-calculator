@@ -32,7 +32,7 @@
                     android:gravity="center_horizontal"
                     android:text="@string/show_calculated_hash"
                     android:layout_marginLeft="15dp"
-                    android:textSize="18dp"
+                    android:textSize="20dp"
                     android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -44,22 +44,36 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:gravity="center_horizontal"
+                    android:orientation="horizontal"
                     android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="213dp"
+                              android:gravity="center_horizontal"
+                              android:orientation="vertical"
+                              android:layout_height="wrap_content">
+                    <Button android:layout_width="115dp"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/nextSig"
+                            android:backgroundTintMode="add"
+                            android:backgroundTint="@color/green"
+                            android:text="@string/calculate_signature"
+                            android:background="@drawable/button_background"
+                            android:layout_height="wrap_content"/>
 
-                <Button android:layout_width="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="5dp"
-                        android:id="@+id/nextSig"
-                        android:text="@string/calculate_signature"
-                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="199dp"
+                              android:orientation="vertical"
+                              android:gravity="center"
+                              android:layout_height="wrap_content">
+                    <Button android:layout_width="115dp"
+                            android:id="@+id/calcHash"
+                            android:text="@string/calculate_hash"
+                            android:background="@drawable/button_background"
+                            android:backgroundTint="@color/yellow"
+                            android:backgroundTintMode="add"
+                            android:gravity="center_horizontal"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
 
-
-                <Button android:layout_width="wrap_content"
-                        android:id="@+id/calcHash"
-                        android:text="@string/calculate_hash"
-                        android:gravity="center_horizontal"
-                        android:layout_height="wrap_content"/>
             </LinearLayout>
 
 

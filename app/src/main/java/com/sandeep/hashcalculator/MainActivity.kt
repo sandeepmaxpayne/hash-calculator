@@ -4,15 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.StringBuilder
 import java.math.BigInteger
 import java.nio.charset.StandardCharsets
-import java.security.KeyPairGenerator
 import java.security.MessageDigest
-import java.security.SecureRandom
-import java.security.Signature
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.setBackgroundDrawable(getDrawable(R.color.reddish))
 
         calcHash.setOnClickListener {
             calculateHash()
@@ -57,10 +56,25 @@ class MainActivity : AppCompatActivity() {
         // Log.d("msg","Data: $input")
         if (input?.length!! > 0 ) {
             val hashvalue = hexString(stringtoByteArray(input!!))
-            showHash.text = hashvalue
+            showHash.text = "Hash Value: $hashvalue"
         } else {
             showHash.text = "Calculated Hash"
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.ec_key, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            R.id.key_exchange-> {
+                val back = Intent(this@MainActivity,KeyExchange::class.java)
+                startActivity(back)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 

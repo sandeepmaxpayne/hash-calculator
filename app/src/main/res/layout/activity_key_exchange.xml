@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".KeyExchange">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_gravity="center"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+
+        <TextView android:layout_width="152dp"
+                  android:text="ALICE Private Value"
+                  android:textStyle="bold"
+                  android:gravity="center_horizontal"
+                  android:layout_height="wrap_content"/>
+        <TextView android:layout_width="180dp"
+                  android:textStyle="bold"
+                  android:layout_marginLeft="80dp"
+                  android:text="Bob Private Vlaue"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+
+        <EditText android:layout_width="205dp"
+                  android:id="@+id/alice_private_value"
+                  android:inputType="text"
+                  android:hint="alice private value"
+                  android:layout_height="wrap_content"/>
+        <EditText android:layout_width="match_parent"
+                  android:id="@+id/bob_private_value"
+                  android:inputType="text"
+                  android:hint="bob private value"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="wrap_content">
+        <Button android:layout_width="wrap_content"
+                android:id="@+id/alice_rand"
+                android:textSize="10sp"
+                android:text="Alice Random Value"
+                android:layout_height="wrap_content"/>
+
+        <Button android:layout_width="wrap_content"
+                android:id="@+id/bob_rand"
+                android:textSize="10sp"
+                android:layout_marginLeft="165dp"
+                android:text="Bob Random Value"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

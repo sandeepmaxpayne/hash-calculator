@@ -17,10 +17,12 @@ class Logo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_logo)
+        supportActionBar?.hide()
         val timeThread = object : Thread(){
                 override fun run(){
                     try{
                         sleep(4000)
+
 
                         val i = Intent(this@Logo, MainActivity::class.java)
                         startActivity(i)
@@ -31,11 +33,11 @@ class Logo : AppCompatActivity() {
                 }
         }
         timeThread.start()
-        logoaim()
+        logoanim()
 
     }
 
-    private fun logoaim(){
+    private fun logoanim(){
         val rotateLogo = AnimatorInflater.loadAnimator(this@Logo , R.animator.rotate_logo)
         rotateLogo.apply {
             setTarget(logo_ecd)

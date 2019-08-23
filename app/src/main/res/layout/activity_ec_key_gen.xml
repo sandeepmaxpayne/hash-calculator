@@ -32,6 +32,9 @@
                 <Button android:layout_width="wrap_content"
                         android:id="@+id/genPrivateKey"
                         android:text="@string/generate_private_key"
+                        android:backgroundTint="@color/red"
+                        android:background="@drawable/button_background"
+                        android:backgroundTintMode="add"
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -54,6 +57,9 @@
                 <Button android:layout_width="wrap_content"
                         android:id="@+id/gen_public_key"
                         android:text="@string/generate_public_key"
+                        android:backgroundTint="@color/red"
+                        android:background="@drawable/button_background"
+                        android:backgroundTintMode="add"
                         android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -101,6 +107,9 @@
                 <Button android:layout_width="wrap_content"
                         android:layout_gravity="center"
                         android:id="@+id/gen_sign"
+                        android:backgroundTint="@color/red"
+                        android:background="@drawable/button_background"
+                        android:backgroundTintMode="add"
                         android:text="@string/generate_signaure"
                         android:layout_height="wrap_content"/>
 
@@ -137,6 +146,9 @@
                 android:id="@+id/verifySig"
                 android:text="@string/generate_ecdsa_key_pair"
                 android:gravity="center_horizontal"
+                android:backgroundTint="@color/red"
+                android:background="@drawable/button_background"
+                android:backgroundTintMode="add"
                 android:layout_height="wrap_content"/>
 
     </LinearLayout>

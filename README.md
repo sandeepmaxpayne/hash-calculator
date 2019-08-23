@@ -10,9 +10,18 @@ To generate the calculated hash on given inputs
   ```           ```
  * __Algorithm used SHA256withECDSA__
  
+ * __ECDSA Key Exchange part added (Working Currently on it)
+ 
  
  
  Snapshot of the application:
  ----------------------------
  
- <img src="Screenshot_1554474964.png" width="250">
+ <img src="Screenshot_1566591853.png" width="250">
+ 
+ 
+ `Note`
+ ------
+
+* ECDSA Key Exchanger can be opened from the hash generator page from the right top corner of the menu, will be appeared as a dropped down list.
+* Only Random Value generator is available on it. Currently working on Key Exchanger Field and will be updated shortly.

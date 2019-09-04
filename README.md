@@ -27,3 +27,5 @@ To generate the calculated hash on given inputs
 
 * ECDSA Key Exchanger can be opened from the hash generator page from the right top corner of the menu, will be appeared as a dropped down list.
 * Only Random Value generator is available on it. Currently working on Key Exchanger Field and will be updated shortly.
+
+``* EC Exchange is on progress and will be completed sortly.``

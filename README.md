@@ -12,12 +12,14 @@ To generate the calculated hash on given inputs
  
  * __ECDSA Key Exchange part added (Working Currently on it)__
  
+ `Note` : By Clicking "Elliptic Curve Parameters" on EC Exchange, The current Page will transit to "Elliptic Curve Parameters" .
+ ------
  
  
  Snapshot of the application:
  ----------------------------
  
- <img src="Screenshot_1566591853.png" width="250">
+ <img src="Screenshot_1566591853.png" width="250">  <img src="Screenshot_1567619549.png" width="250">
  
  
  `Note`

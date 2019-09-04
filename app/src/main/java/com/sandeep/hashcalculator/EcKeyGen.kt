@@ -30,6 +30,7 @@ class EcKeyGen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ec_key_gen)
 
+        supportActionBar?.setTitle(R.string.signatureCalc)
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.dark))
 
         genPrivateKey.setOnClickListener {
@@ -212,6 +213,7 @@ class EcKeyGen : AppCompatActivity() {
             R.id.back -> {
                 val back = Intent(this@EcKeyGen, MainActivity::class.java)
                 startActivity(back)
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

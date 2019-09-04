@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
             R.id.key_exchange-> {
                 val back = Intent(this@MainActivity,KeyExchange::class.java)
                 startActivity(back)
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

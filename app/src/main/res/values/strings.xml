@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HashCalculator</string>
+    <string name="app_name">Hash Calculator</string>
     <string name="enter_text">enter text</string>
     <string name="show_calculated_hash">Show Calculated Hash</string>
     <string name="calculate_hash">Calculate Hash</string>
@@ -14,5 +14,31 @@
     <string name="signature">Signature:</string>
     <string name="enter_public_key_to_verify_signature">enter Public Key to Verify Signature</string>
     <string name="calculate_signature">calculate Signature</string>
+    <string name="elliptic_curve_parameters">Elliptic Curve Parameters</string>
+    <string name="curve_q">Curve Q</string>
+    <string name="curve_q_parameter">Curve Q Parameter</string>
+    <string name="curve_a">Curve A</string>
+    <string name="curve_a_parameter">Curve A Parameter</string>
+    <string name="curve_b">Curve B</string>
+    <string name="curve_b_parameter">Curve B Parameter</string>
+    <string name="g_x_y">G (X, Y)</string>
+    <string name="coordinate_x_of_base_point">Coordinate X of Base Point</string>
+    <string name="coordinate_y_of_base_point">Coordinate Y of Base Point</string>
+    <string name="n">N</string>
+    <string name="integer_order_of_g">Integer order of G</string>
+    <string name="sec128r1">sec128r1</string>
 
+
+    <string name="secp128r1">Using secp128r1 EC parameters</string>
+    <string name="secp160k1">Using secp160k1 EC parameters</string>
+    <string name="secp160r1">Using secp160r1 EC parameters</string>
+    <string name="secp192k1">Using secp192k1 EC parameters</string>
+    <string name="secp192r1">Using secp192r1 EC parameters</string>
+    <string name="secp224r1">Using secp224r1 EC parameters</string>
+    <string name="secp256r1">Using secp256r1 EC parameters</string>
+    <string name="secp256k1">Using secp256k1 EC parameters</string>
+
+    <string name="signatureCalc">Calculate Signature</string>
+    <string name="keyExch">Hash Calclator: Key Exchange</string>
+    <string name="ecpara">Hash Calculator: EC Parameter</string>
 </resources>

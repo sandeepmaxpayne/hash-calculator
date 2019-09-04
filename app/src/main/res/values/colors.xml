@@ -13,4 +13,8 @@
 
     <color name="red">#A80FC2</color>
     <color name="reddish">#D0D80C0C</color>
+    <color name="black">#000000</color>
+    <color name="lightBlack">#161414</color>
+
+    <color name="lightColor">#DF655C</color>
 </resources>

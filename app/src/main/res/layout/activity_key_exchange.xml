@@ -1,62 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/key_exchange_id"
         android:orientation="vertical"
         tools:context=".KeyExchange">
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_gravity="center"
-                  android:orientation="horizontal"
-                  android:layout_height="wrap_content">
 
-        <TextView android:layout_width="152dp"
-                  android:text="ALICE Private Value"
-                  android:textStyle="bold"
-                  android:gravity="center_horizontal"
-                  android:layout_height="wrap_content"/>
-        <TextView android:layout_width="180dp"
-                  android:textStyle="bold"
-                  android:layout_marginLeft="80dp"
-                  android:text="Bob Private Vlaue"
-                  android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Alice Private Value"
+                android:textStyle="bold" />
+
+        <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="Bob Private Vlaue"
+                android:gravity="end"
+                android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <EditText android:layout_width="205dp"
-                  android:id="@+id/alice_private_value"
-                  android:inputType="text"
-                  android:hint="alice private value"
-                  android:layout_height="wrap_content"/>
-        <EditText android:layout_width="match_parent"
-                  android:id="@+id/bob_private_value"
-                  android:inputType="text"
-                  android:hint="bob private value"
-                  android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/alice_private_value"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:hint="alice private value"
+                android:inputType="text" />
+
+        <EditText
+                android:id="@+id/bob_private_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="bob private value"
+                android:inputType="text" />
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:layout_height="wrap_content">
-        <Button android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
                 android:id="@+id/alice_rand"
-                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Alice Random Value"
-                android:layout_height="wrap_content"/>
+                android:textSize="10sp" />
 
-        <Button android:layout_width="wrap_content"
+        <Button
                 android:id="@+id/bob_rand"
-                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="165dp"
                 android:text="Bob Random Value"
-                android:layout_height="wrap_content"/>
+                android:textSize="10sp" />
 
 
     </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Alice's Public Point (A=aG) (X, Y)"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="end"
+                    android:text="Bob's Private Value \n (B=bG) (X, Y)"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/compute_pub_alice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compute Public"
+                    android:textSize="10sp" />
+
+            <Button
+                    android:id="@+id/compute_pub_bob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="165dp"
+                    android:text="compute public"
+                    android:textSize="9sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:layout_width="152dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Alice's Secret Key (S=aB=abG) (X, Y)"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="end"
+                    android:text="Bob's Secret Value \n (S=bA=baG) (X, Y)"
+                    android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+            <Button
+                    android:id="@+id/secret_key_alice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Compute Public"
+                    android:textSize="10sp" />
+
+            <Button
+                    android:id="@+id/secret_key_bob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="165dp"
+                    android:text="compute public"
+                    android:textSize="9sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/text_ecparams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:transitionName="sharedTitle"
+            android:text="Elliptic Curve Parameters" />
 
 </LinearLayout>

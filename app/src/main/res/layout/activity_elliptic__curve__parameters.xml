@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".EllipticCurveParameters">
+<android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:gravity="start"
+                    android:text="@string/elliptic_curve_parameters"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:textStyle="italic"
+                    android:transitionName="sharedTitle"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="34dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+                android:id="@+id/parameter_status"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="center"
+                android:hint="Algorithm Status"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/parameter_status"
+                tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/sec128"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/sec128r1"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="175dp"
+                        tools:layout_editor_absoluteY="359dp" />
+
+                <Button
+                        android:id="@+id/secp160"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:layout_marginRight="5dp"
+                        android:text="secp160k1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="29dp"
+                        tools:layout_editor_absoluteY="202dp" />
+
+                <Button
+                        android:id="@+id/secp160r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:layout_marginRight="5dp"
+                        android:text="secp160r1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="239dp"
+                        tools:layout_editor_absoluteY="302dp" />
+
+                <Button
+                        android:id="@+id/secp192k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:text="secp192k1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="161dp"
+                        tools:layout_editor_absoluteY="232dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/secp192r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:layout_marginRight="5dp"
+                        android:text="secp192r1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="80dp"
+                        tools:layout_editor_absoluteY="311dp" />
+
+                <Button
+                        android:id="@+id/secp224"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:layout_marginRight="5dp"
+                        android:text="secp224r1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="274dp"
+                        tools:layout_editor_absoluteY="184dp" />
+
+                <Button
+                        android:id="@+id/secp256r1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:text="secp256r1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="274dp"
+                        tools:layout_editor_absoluteY="184dp" />
+
+
+                <Button
+                        android:id="@+id/secp256k1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background_pink"
+                        android:backgroundTint="@color/red"
+                        android:backgroundTintMode="add"
+                        android:layout_marginLeft="5dp"
+                        android:text="secp256k1"
+                        android:textAllCaps="false"
+                        tools:layout_editor_absoluteX="274dp"
+                        tools:layout_editor_absoluteY="184dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+                tools:ignore="MissingConstraints">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/curve_q"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/curve_Q"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/curve_q_parameter"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="117dp"
+                    tools:layout_editor_absoluteY="139dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/curve_a"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/curve_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/curve_a_parameter"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="64dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/curve_b"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/curve_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/curve_b_parameter"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="64dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/g_x_y"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/g_x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/coordinate_x_of_base_point"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="64dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+            <EditText
+                    android:id="@+id/g_y"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/coordinate_y_of_base_point"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="64dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+            <EditText
+                    android:id="@+id/integer_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/integer_order_of_g"
+                    android:inputType="text|number"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="64dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

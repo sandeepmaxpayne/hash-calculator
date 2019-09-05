@@ -29,3 +29,5 @@ To generate the calculated hash on given inputs
 * Only Random Value generator is available on it. Currently working on Key Exchanger Field and will be updated shortly.
 
 ``* EC Exchange is on progress and will be completed sortly.``
+
+* App will crash for below android version 24. [This will be fixed in next update.] 

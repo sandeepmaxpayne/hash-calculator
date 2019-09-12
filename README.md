@@ -19,7 +19,7 @@ To generate the calculated hash on given inputs
  Snapshot of the application:
  ----------------------------
  
- <img src="Screenshot_1566591853.png" width="250">  <img src="Screenshot_1567619549.png" width="250">
+ <img src="Screenshot_1566591853.png" width="250"> <img src="Screenshot_1567619549.png" width="250">  <img src="Screenshot_1568309304.png" width="250">
  
  
  `Note`
@@ -30,4 +30,13 @@ To generate the calculated hash on given inputs
 
 ``* EC Exchange is on progress and will be completed sortly.``
 
-* App will crash for below android version 24. [This will be fixed in next update.] 
+'Bug Fixes'
+---------
+
+* App crashed Fixed
+
+`Drawback`
+-------
+
+* Unable to release Buffer
+* Invalid point in generating secret key.

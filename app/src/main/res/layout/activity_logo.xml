@@ -7,9 +7,11 @@
         android:layout_height="match_parent"
         tools:context=".Logo">
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
             android:layout_width="313dp"
-            android:layout_height="313dp" app:srcCompat="@drawable/ecd" android:id="@+id/logo_ecd"
+            android:layout_height="313dp"
+            app:srcCompat="@drawable/ecd"
+            android:id="@+id/logo_ecd"
             tools:ignore="MissingConstraints"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -6,8 +7,13 @@
         android:layout_height="match_parent"
         android:id="@+id/key_exchange_id"
         android:orientation="vertical"
+        android:background="@color/background"
         tools:context=".KeyExchange">
-
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical">
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,14 +65,16 @@
                 android:id="@+id/alice_rand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
                 android:text="Alice Random Value"
+                android:background="@drawable/button_background_dark_pink"
                 android:textSize="10sp" />
-
         <Button
                 android:id="@+id/bob_rand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="165dp"
+                android:layout_marginLeft="170dp"
+                android:background="@drawable/button_background_dark_pink"
                 android:text="Bob Random Value"
                 android:textSize="10sp" />
 
@@ -102,11 +110,13 @@
                 android:orientation="horizontal">
 
             <EditText
+                    android:id="@+id/alicex"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
 
             <EditText
+                    android:id="@+id/bobx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
@@ -116,9 +126,11 @@
                 android:layout_height="wrap_content">
             <EditText
                     android:layout_width="205dp"
+                    android:id="@+id/alicey"
                     android:layout_height="wrap_content"
                     android:inputType="text"/>
             <EditText
+                    android:id="@+id/boby"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"/>
@@ -131,6 +143,7 @@
             <Button
                     android:id="@+id/compute_pub_alice"
                     android:layout_width="wrap_content"
+                    android:background="@drawable/button_background_dark_pink"
                     android:layout_height="wrap_content"
                     android:text="Compute Public"
                     android:textSize="10sp" />
@@ -141,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="165dp"
                     android:text="compute public"
+                    android:background="@drawable/button_background_dark_pink"
                     android:textSize="9sp" />
 
         </LinearLayout>
@@ -175,11 +189,13 @@
                 android:orientation="horizontal">
 
             <EditText
+                    android:id="@+id/alice_secretX"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
 
             <EditText
+                    android:id="@+id/bob_secretX"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
@@ -188,10 +204,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <EditText
+                    android:id="@+id/alice_secretY"
                     android:layout_width="205dp"
                     android:layout_height="wrap_content"
                     android:inputType="text"/>
             <EditText
+                    android:id="@+id/bob_secretY"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"/>
@@ -205,6 +223,7 @@
                     android:id="@+id/secret_key_alice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_dark_pink"
                     android:text="Compute Public"
                     android:textSize="10sp" />
 
@@ -213,6 +232,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="165dp"
+                    android:background="@drawable/button_background_dark_pink"
                     android:text="compute public"
                     android:textSize="9sp" />
 
@@ -231,4 +251,162 @@
             android:transitionName="sharedTitle"
             android:text="Elliptic Curve Parameters" />
 
+
+
+
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/parameter_status"
+            tools:ignore="MissingConstraints">
+
+        <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/s128"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/sec128r1"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="175dp"
+                    tools:layout_editor_absoluteY="359dp" />
+
+            <Button
+                    android:id="@+id/s160"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:layout_marginRight="5dp"
+                    android:text="secp160k1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="29dp"
+                    tools:layout_editor_absoluteY="202dp" />
+
+            <Button
+                    android:id="@+id/s160r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:layout_marginRight="5dp"
+                    android:text="secp160r1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="239dp"
+                    tools:layout_editor_absoluteY="302dp" />
+
+            <Button
+                    android:id="@+id/s192k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:text="secp192k1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="161dp"
+                    tools:layout_editor_absoluteY="232dp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/s192r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:layout_marginRight="5dp"
+                    android:text="secp192r1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="80dp"
+                    tools:layout_editor_absoluteY="311dp" />
+
+            <Button
+                    android:id="@+id/s224"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:layout_marginRight="5dp"
+                    android:text="secp224r1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="274dp"
+                    tools:layout_editor_absoluteY="184dp" />
+
+            <Button
+                    android:id="@+id/s256r1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:text="secp256r1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="274dp"
+                    tools:layout_editor_absoluteY="184dp" />
+
+
+            <Button
+                    android:id="@+id/s256k1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background_pink"
+                    android:backgroundTint="@color/red"
+                    android:backgroundTintMode="add"
+                    android:layout_marginLeft="5dp"
+                    android:text="secp256k1"
+                    android:textAllCaps="false"
+                    tools:layout_editor_absoluteX="274dp"
+                    tools:layout_editor_absoluteY="184dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dispParam"
+                    android:hint="@string/parameter_used"
+                    android:textStyle="italic"
+                    android:textSize="16sp"
+                    />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/time_required_to_compute"
+                    android:id="@+id/computeTime"
+                    android:textStyle="italic"
+                    android:textSize="16sp"/>
+
+        </LinearLayout>
+</ScrollView>
 </LinearLayout>

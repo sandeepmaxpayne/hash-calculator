@@ -26,7 +26,7 @@
     <string name="coordinate_y_of_base_point">Coordinate Y of Base Point</string>
     <string name="n">N</string>
     <string name="integer_order_of_g">Integer order of G</string>
-    <string name="sec128r1">sec128r1</string>
+    <string name="sec128r1">secp128r1</string>
 
 
     <string name="secp128r1">Using secp128r1 EC parameters</string>
@@ -41,4 +41,8 @@
     <string name="signatureCalc">Calculate Signature</string>
     <string name="keyExch">Hash Calclator: Key Exchange</string>
     <string name="ecpara">Hash Calculator: EC Parameter</string>
+    <string name="title">Title</string>
+    <string name="error_message">Error Message</string>
+    <string name="time_required_to_compute">time required to compute</string>
+    <string name="parameter_used">parameter used</string>
 </resources>

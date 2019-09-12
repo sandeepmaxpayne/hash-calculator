@@ -17,4 +17,7 @@
     <color name="lightBlack">#161414</color>
 
     <color name="lightColor">#DF655C</color>
+    <color name="dialogBackground">#E4881B</color>
+    <color name="dialogBtnBackground">#D1882E</color>
+    <color name="darkPink">#9FEB0F59</color>
 </resources>

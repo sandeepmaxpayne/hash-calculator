@@ -9,9 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".EllipticCurveParameters">
-
-        </activity>
+        <activity android:name=".EllipticCurveParameters"></activity>
         <activity android:name=".KeyExchange">
         </activity>
         <activity android:name=".Logo">
@@ -21,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EcKeyGen"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".EcKeyGen" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

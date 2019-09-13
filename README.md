@@ -33,10 +33,11 @@ To generate the calculated hash on given inputs
 'Bug Fixes'
 ---------
 
-* App crashed Fixed
+* App crashed Fixed.
+* cast error from BCECPublicKey to ECPublicKey solved.
 
 `Drawback`
 -------
 
-* Unable to release Buffer
+* Unable to release Buffer.
 * Invalid point in generating secret key.

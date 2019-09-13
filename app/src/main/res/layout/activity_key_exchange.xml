@@ -60,23 +60,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Button
-                android:id="@+id/alice_rand"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:text="Alice Random Value"
-                android:background="@drawable/button_background_dark_pink"
-                android:textSize="10sp" />
-        <Button
-                android:id="@+id/bob_rand"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
-                android:background="@drawable/button_background_dark_pink"
-                android:text="Bob Random Value"
-                android:textSize="10sp" />
+            <Button
+                    android:id="@+id/alice_rand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginEnd="122dp"
+                    android:background="@drawable/button_background_dark_pink"
+                    android:text="Alice Random Value"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bob_rand"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+            <Button
+                    android:id="@+id/bob_rand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button_background_dark_pink"
+                    android:text="Bob Random Value"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+
 
 
     </LinearLayout>
@@ -140,22 +157,36 @@
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content">
-            <Button
-                    android:id="@+id/compute_pub_alice"
-                    android:layout_width="wrap_content"
-                    android:background="@drawable/button_background_dark_pink"
-                    android:layout_height="wrap_content"
-                    android:text="Compute Public"
-                    android:textSize="10sp" />
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <Button
-                    android:id="@+id/compute_pub_bob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="165dp"
-                    android:text="compute public"
-                    android:background="@drawable/button_background_dark_pink"
-                    android:textSize="9sp" />
+                <Button
+                        android:id="@+id/compute_pub_alice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/button_background_dark_pink"
+                        android:text="Compute Public"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                <Button
+                        android:id="@+id/compute_pub_bob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/button_background_dark_pink"
+                        android:text="compute public"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
 
         </LinearLayout>
     </LinearLayout>
@@ -219,22 +250,34 @@
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content">
-            <Button
-                    android:id="@+id/secret_key_alice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_background_dark_pink"
-                    android:text="Compute Public"
-                    android:textSize="10sp" />
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <Button
-                    android:id="@+id/secret_key_bob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="165dp"
-                    android:background="@drawable/button_background_dark_pink"
-                    android:text="compute public"
-                    android:textSize="9sp" />
+                <Button
+                        android:id="@+id/secret_key_alice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/button_background_dark_pink"
+                        android:text="Compute Public"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                        android:id="@+id/secret_key_bob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/button_background_dark_pink"
+                        android:text="compute public"
+                        android:textSize="9sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
 
         </LinearLayout>
     </LinearLayout>

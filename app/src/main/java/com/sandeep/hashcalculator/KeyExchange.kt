@@ -149,7 +149,7 @@ class KeyExchange : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun getAlicePubCoord(){
         try {
-            bobPrivateValue = genRandom() // This should not be there
+         //   bobPrivateValue = genRandom() // This should not be there
 
             val before = Time.SECOND
 
@@ -173,7 +173,7 @@ class KeyExchange : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun getBobPubCoord(){
         try {
-            alicePrivateValue = genRandom() // This should not be there
+       //     alicePrivateValue = genRandom() // This should not be there
 
             val before = Time.SECOND
             val curve = getCurve()
@@ -197,8 +197,8 @@ class KeyExchange : AppCompatActivity() {
         try {
             val before = Time.SECOND
             val curve = getCurve()
-            bobPubX = gx.toString()
-            bobPubY = gy.toString()
+//            bobPubX = gx.toString()
+//            bobPubY = gy.toString()
             val P = ECPoint.Fp(
                 curve,
                 curve.fromBigInteger(BigInteger(bobPubX)),
@@ -206,15 +206,15 @@ class KeyExchange : AppCompatActivity() {
                 // Bob x and y pub values [da * (db * G) ]
             )
 
-            val P1 = getG(curve) // This should not be there
-            val P2 = P1.multiply(BigInteger(alicePrivateValue)) // This should not be there
+//            val P1 = getG(curve) // This should not be there
+//            val P2 = P1.multiply(BigInteger(alicePrivateValue)) // This should not be there
             val a = BigInteger(alicePrivateValue)
             val S = P.multiply(a)
             val after = Time.SECOND
-//            val Sx = S.xCoord.toBigInteger().toString() // point not getting valid
-//            val Sy = S.yCoord.toBigInteger().toString() // point not getting valid
-            alice_secretX.setText(fromHex(P2.xCoord.toString()).toString())
-            alice_secretY.setText(fromHex(P2.yCoord.toString()).toString())
+            val Sx = S.xCoord.toBigInteger().toString() // point not getting valid
+            val Sy = S.yCoord.toBigInteger().toString() // point not getting valid
+            alice_secretX.setText(Sx)
+            alice_secretY.setText(Sy)
             time = (after - before)
         }catch (ex: NullPointerException){
             alertDialog("Bob Public Coordinate", "Please generate Bob's public coordinate")
@@ -231,25 +231,25 @@ class KeyExchange : AppCompatActivity() {
             genRandom()
             val before = Time.SECOND
             val curve = getCurve()
-           // alicePubX =
-            alicePubY = gy.toString()
+           //alicePubX =
+           // alicePubY = gy.toString()
             val P = ECPoint.Fp(
                 curve,
-                curve.fromBigInteger(BigInteger(alicePubX.plus(gx))),
-                curve.fromBigInteger(BigInteger(alicePubY.plus(gy)))
+                curve.fromBigInteger(BigInteger(alicePubX)),
+                curve.fromBigInteger(BigInteger(alicePubY))
             )
 
-            val P1 = getG(curve) // This should not be there
-            val P2 = P1.multiply(BigInteger(bobPrivateValue)) // This should not be there
+       //     val P1 = getG(curve) // This should not be there
+      //      val P2 = P1.multiply(BigInteger(bobPrivateValue)) // This should not be there
 
             val b = BigInteger(bobPrivateValue)
             val S = P.multiply(b)
             // Alice x and y pub values [db * (da * G) ]
             val after = Time.SECOND
-//            val Sx = S.xCoord.toBigInteger().toString() // point not valid
-//            val Sy = S.yCoord.toBigInteger().toString() // point not valid
-            bob_secretX.setText(fromHex(P2.xCoord.toString()).toString())
-            bob_secretY.setText(fromHex(P2.yCoord.toString()).toString())
+            val Sx = S.xCoord.toBigInteger().toString() // point not valid
+            val Sy = S.yCoord.toBigInteger().toString() // point not valid
+            bob_secretX.setText(Sx)
+            bob_secretY.setText(Sy)
             time = (after - before)
         }catch (ex: NullPointerException){
             alertDialog("Alice Public Coordinate", "Please Generate Alice Public Coordinate")
